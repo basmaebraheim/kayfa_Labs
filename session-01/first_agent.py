@@ -6,15 +6,6 @@ from google import genai
 # Load environment variables
 load_dotenv()
 
-
-# client = genai.Client(
-#     api_key=os.getenv("GEMINI_API_KEY")
-# )
-
-# for model in client.models.list():
-#     print(model.name)
-
-
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
@@ -48,6 +39,10 @@ Boundaries:
 - Never pretend an AI agent is fully autonomous or infallible.
 - If you are unsure, say so honestly.
 
+Response length:
+- Keep answers short: around 3-6 sentences or a few bullet points.
+- Go deeper only if the user asks for more detail.
+
 Keep responses clear, practical, and engaging.
 """
 
@@ -67,7 +62,11 @@ chat = client.chats.create(
 message_count = 0
 
 while True:
-    user_input = input("You: ").strip()
+    try:
+        user_input = input("You: ").strip()
+    except (KeyboardInterrupt, EOFError):
+        print("\n\nAgent: Goodbye! Keep learning and building AI agents!")
+        break
 
     if user_input.lower() in ["exit", "quit"]:
         print("\nAgent: Goodbye! Keep learning and building AI agents!")
