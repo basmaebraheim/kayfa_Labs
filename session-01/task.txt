@@ -1,0 +1,44 @@
+KAYFA ACADEMY — AGENTIC AI DIPLOMA
+Session 01 — Welcome to Agentic AI: Concepts, Use Cases & Your First Agent
+==============================================================================
+
+4. WEEKLY PRACTICAL TASK 1 — RUN & PERSONALIZE YOUR FIRST AGENT
+===============================================================
+
+Task 1 — Run & personalize your first agent (Difficulty: Beginner)
+------------------------------------------------------------------
+Context. You've seen one sentence of system prompt turn the same model into a pirate, a banker and a
+support agent. Now make the agent yours: give it a purpose that is useful to you or to someone you know
+(a travel helper, a study assistant, a recipe coach, a gym buddy…).
+
+Requirements
+
+[ ] Your Python environment works: a virtual environment, packages installed, and the key in .env (never in the code). The starter agent runs.
+[ ] A new personality and purpose, set through the system prompt. The prompt states the role, the tone and at least one boundary (something the agent must not do).
+[ ] One small improvement: a welcome message, a message counter, or a polite goodbye on exit.
+[ ] The chat still ends cleanly on exit / quit.
+
+Deliverables: your modified labs/session-01/first_agent.py + a screenshot of a short conversation (at
+least 3 exchanges) that shows the personality and your improvement. Do not submit .env, and make sure
+no key is visible in the screenshot.
+
+Due: before Session 2.
+
+Grading rubric
+--------------
+
+| Criterion | Points |
+|---|---|
+| It works: the agent starts, answers in character for at least 3 turns, and exits cleanly on exit/quit | 4 |
+| Requirements met: new purpose and personality (1) · at least one boundary in the system prompt (1) · one working improvement from the list (1) | 3 |
+| Code quality: readable names, the prompt in a clearly named variable or constant, key loaded from .env (a hard-coded key scores 0 here) | 2 |
+| Submission complete: code + screenshot with at least 3 exchanges and no visible key | 1 |
+
+Hints
+-----
+
+- Start from your Step 7 version. Change only the system prompt first and run it; add the improvement afterwards.
+- A good system prompt answers five questions: Who are you? Who are you talking to? How should you sound? What must you never do? How long should answers be?
+- Message counter: create a variable before the loop, add 1 after each reply, and show it with an f-string.
+- Polite goodbye: the break line is where the chat ends, so print something just before it.
+- Screenshot: Win+Shift+S on Windows, Cmd+Shift+4 on macOS.
